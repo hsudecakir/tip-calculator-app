@@ -36,7 +36,7 @@ function resetButtonStyles() {
   tipButtons.forEach(button => {
     button.style.backgroundColor = '#00474B';
     button.style.color = '#FFFFFF';
-    custom.value = '';
+    // custom.value = '';
   });
 }
 
@@ -45,6 +45,7 @@ function selectButton(event) {
   const clickedButton = event.currentTarget;
   clickedButton.style.backgroundColor ='#26C2AE';
   clickedButton.style.color ='#00474B';
+  custom.value = '';
 }
 
 function calculateCustom(){

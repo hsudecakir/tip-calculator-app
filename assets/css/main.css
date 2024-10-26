@@ -147,6 +147,7 @@ button{
   line-height: 35.54px;
   text-align: center;
   color: var(--white);
+  height: 48px;
 }
 
 .select-tip__grid-container input{
