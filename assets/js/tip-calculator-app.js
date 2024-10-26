@@ -9,6 +9,7 @@ function calculateMainScope(){
     totalTipPerPerson = totalTipMainScope / Number(peopleInput.value);
     tipTotal.innerText = `$${totalTipMainScope.toFixed(2)}`;
     tipPerPerson.innerText = `$${totalTipPerPerson.toFixed(2)}`;
+    cantBeZero();
   }
 }
 
@@ -21,7 +22,7 @@ function colorBtn(){
 }
 
 function cantBeZero(){
-  if(Number(peopleInput.value) < 1 && peopleInput.value !== ''){
+  if(Number(peopleInput.value) < 1 || peopleInput.value === ''){
     peopleInput.style.outlineColor = '#E17457';
     cantBeZeroText.style.display = 'block';
   } else {
