@@ -50,11 +50,14 @@ function selectButton(event) {
 
 function calculateCustom(){
   resetButtonStyles();
-  let totalTip = Number(billInput.value) * (Number(custom.value) / 100);
-  let tip = Number(totalTip) / Number(peopleInput.value);
-  tipTotal.innerText = `$${totalTip.toFixed(2)}`;
-  tipPerPerson.innerText = `$${tip.toFixed(2)}`;
-  
+  // if(Number(billInput.value) > 0 && (Number(custom.value) > 0 && Number(peopleInput.value) > 0){
+  //   let totalTip = Number(billInput.value) * (Number(custom.value) / 100);
+  //   let tip = Number(totalTip) / Number(peopleInput.value);
+  //   tipTotal.innerText = `$${totalTip.toFixed(2)}`;
+  //   tipPerPerson.innerText = `$${tip.toFixed(2)}`;
+  // }
+  selectTip = Number(custom.value);
+  calculateMainScope();
 }
 
 function resetValues(){
